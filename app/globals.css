@@ -222,6 +222,13 @@ html.is-loading { overflow:hidden; }
 }
 .ld.done .ld-stage { opacity:0; transform:translateY(-14px) scale(.97); filter:blur(4px); }
 
+/* no-JS failsafe: the splash is server-rendered, and its own timeout is
+   JavaScript — so if scripts never run (blocked, failed, very slow) the
+   curtain lifts on its own instead of hiding the site at 000% forever.
+   The normal JS exit finishes at ~2.5s, well before this kicks in. */
+.ld { animation:ld-failsafe .6s ease 6s forwards; }
+@keyframes ld-failsafe { to { opacity:0; visibility:hidden; pointer-events:none; } }
+
 /* logo + orbit rings */
 .ld-logo-wrap {
   position:relative; width:clamp(122px,26vw,164px); aspect-ratio:1;

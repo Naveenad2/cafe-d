@@ -1,12 +1,5 @@
 "use client";
 
-/* ════════════════════════════════════════════════════════════════
-   CHEF → "Chef Kuan Lai's discipline"
-   An arched portrait (a temple-window silhouette) with an offset
-   hairline arch, a spinning "master of the wok" seal and a giant
-   Thai เชฟ behind it; a Bodoni pull-quote, then the three kitchens
-   that share one pass as glyph cards.
-   ════════════════════════════════════════════════════════════════ */
 
 import { IMAGES } from "@/lib/data";
 import { Label } from "@/components/Kit";
